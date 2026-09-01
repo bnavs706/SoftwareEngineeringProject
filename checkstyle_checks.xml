@@ -194,4 +194,9 @@
       <property name="influenceFormat" value="1"/>
     </module>
   </module>
+<module name="Checker">
+  <module name="TreeWalker">
+    <module name="GenericWhitespace"/>
+  </module>
+</module>
 </module>
