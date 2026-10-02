@@ -1,12 +1,14 @@
 package apis;
 
 import project.annotations.ConceptualAPIPrototype;
-
+import java.math.BigInteger;
 public class FactorialConceptualAPIProtoype {
 
 	 @ConceptualAPIPrototype
-	public int factorialOperator(int intput) {
-		 return 120;
+	 public void prototype(FactorialConceptualAPI api) {
+	
+		 FactorialComputationRequest request =
+				    new FactorialComputationRequest(BigInteger.valueOf(5));
 	}
 	
 }

@@ -5,5 +5,7 @@ import project.annotations.ConceptualAPI;
 @ConceptualAPI
 public interface FactorialConceptualAPI {
 
-	int factorialOperator(int input);
+	FactorialComputationResult factorialOperator(
+			FactorialComputationRequest request);
+	// Give Factorial Operator a request it gives me back a result
 }
