@@ -5,12 +5,17 @@ import project.annotations.ProcessAPIPrototype;
 public class FactorialProcessAPIPrototype {
 
 	@ProcessAPIPrototype
-	public int[] readData(String inputSource) {
-		return new int[] {1, 2, 3};
-	}
+	public void prototype(FactorialProcessAPI api) {
 	
-	@ProcessAPIPrototype
-	public void dataStore(String outputDestination, int[] results) {
-		
+	InputSource source = new InputSource("input.txt");
+	
+	FactorialData data = api.readData(source);
+	
+	OutputDestination destination =
+			new OutputDestination("output.tx");
+	
+	api.dataStore(destination, data);
+	
 	}
 }
+
