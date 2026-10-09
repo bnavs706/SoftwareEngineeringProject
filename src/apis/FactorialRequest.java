@@ -28,5 +28,24 @@ public class FactorialRequest {
         this.inputResultDelimiter = inputResultDelimiter;
         this.resultDelimiter = resultDelimiter;
         this.useDefaultDelimiters = useDefaultDelimiters;
+        
+    }
+    public String getInputSource() {
+        return inputSource;
+    }
+    public String getOutputDestination() {
+        return outputDestination;
+    }
+
+    public String getInputResultDelimiter() {
+        return inputResultDelimiter;
+    }
+
+    public String getResultDelimiter() {
+        return resultDelimiter;
+    }
+
+    public boolean isUseDefaultDelimiters() {
+        return useDefaultDelimiters;
     }
 }
