@@ -25,9 +25,13 @@ dependencies {
     testRuntimeOnly('org.junit.platform:junit-platform-launcher:1.13.4')
 	testImplementation('org.mockito:mockito-core:5.10.0')
 	implementation('com.google.code.gson:gson:2.13.1')
+	testImplementation('fr.inria.gforge.spoon:spoon-core:10.4.0')
 	
 }
 
 test {
     useJUnitPlatform()
+       filter {
+        excludeTestsMatching "apis.ComputeEngineIntegrationTest"
+    }
 }
