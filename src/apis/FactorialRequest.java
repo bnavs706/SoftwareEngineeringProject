@@ -16,6 +16,11 @@ public class FactorialRequest {
 
     private boolean useDefaultDelimiters;
 
+    private InputSource inputSourceObject;
+    
+    private OutputDestination outputDestinationObject;
+    
+    
     public FactorialRequest(
             String inputSource,
             String outputDestination,
@@ -28,5 +33,43 @@ public class FactorialRequest {
         this.inputResultDelimiter = inputResultDelimiter;
         this.resultDelimiter = resultDelimiter;
         this.useDefaultDelimiters = useDefaultDelimiters;
+        
+    }
+    public FactorialRequest(
+            InputSource inputSource,
+            OutputDestination outputDestination) {
+
+        this.inputSource = "memory";
+        this.outputDestination = "memory";
+        this.inputResultDelimiter = null;
+        this.resultDelimiter = null;
+        this.useDefaultDelimiters = true;
+        this.inputSourceObject = inputSource;
+        this.outputDestinationObject = outputDestination;
+    }
+    public String getInputSource() {
+        return inputSource;
+    }
+    public String getOutputDestination() {
+        return outputDestination;
+    }
+
+    public String getInputResultDelimiter() {
+        return inputResultDelimiter;
+    }
+
+    public String getResultDelimiter() {
+        return resultDelimiter;
+    }
+
+    public boolean isUseDefaultDelimiters() {
+        return useDefaultDelimiters;
+    }
+    public InputSource getInputSourceObject() {
+        return inputSourceObject;
+    }
+
+    public OutputDestination getOutputDestinationObject() {
+        return outputDestinationObject;
     }
 }
