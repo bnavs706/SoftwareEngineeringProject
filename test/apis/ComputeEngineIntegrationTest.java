@@ -1,5 +1,6 @@
 package apis;
 import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ComputeEngineIntegrationTest {
@@ -11,7 +12,7 @@ public class ComputeEngineIntegrationTest {
     	InMemoryFactorialProcessImpl process =
     	        new InMemoryFactorialProcessImpl();
     	FactorialNetworkImpl network =
-    	        new FactorialNetworkImpl(conceptual);
+    	        new FactorialNetworkImpl(conceptual, process);
     	// Dependency Injection ^^
     	InMemoryInputSource input =
     	        new InMemoryInputSource(List.of(1, 10, 25));
