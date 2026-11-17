@@ -1,18 +1,21 @@
 
 package apis;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test; 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
+
 
 public class TestFactorialNetworkAPI {
 	@Test
 	public void testFactorialRequest() {
 		FactorialConceptualAPI mockConceptual =
 		        mock(FactorialConceptualAPI.class);
+		FactorialProcessAPI mockProcess = mock(FactorialProcessAPI.class);
 		FactorialNetworkImpl network =
-		        new FactorialNetworkImpl(mockConceptual);
+		        new FactorialNetworkImpl(mockConceptual, mockProcess);
+	
 		FactorialRequest request = new FactorialRequest(
 			    "numbers.txt",
 			    "results.txt",
